@@ -5,6 +5,8 @@ import com.tricentis.demowebshop.config.Project;
 import io.qameta.allure.Step;
 import org.openqa.selenium.Cookie;
 
+import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.refresh;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static io.restassured.RestAssured.given;
 
@@ -30,6 +32,7 @@ public class LoginRequest {
     @Step("Установаить Cookie: {cookieName}")
     public void setAuthorizationCookieToBrowser(String cookieName) {
         getWebDriver().manage().addCookie(new Cookie(cookieName, getAuthorizationCookie(cookieName)));
+        refresh();
     }
 
 }
