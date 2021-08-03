@@ -18,7 +18,7 @@ public interface ProjectConfig extends Config {
     @Key("browserVersion")
     String browserVersion();
 
-    @DefaultValue("http://demowebshop.tricentis.com/")
+    @DefaultValue("http://demowebshop.tricentis.com")
     @Key("baseUrl")
     String baseUrl();
 
