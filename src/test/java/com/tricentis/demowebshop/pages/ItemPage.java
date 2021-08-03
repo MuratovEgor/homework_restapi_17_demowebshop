@@ -11,7 +11,7 @@ public class ItemPage {
             countItemInShoppingCart = $(".cart-qty"),
             btnAddCart = $(".add-to-cart-button");
 
-    @Step("Проверить что название товара: {$itemName}")
+    @Step("Проверить что название товара: {itemName}")
     public void checkTitleItem(String itemName) {
         itemTitleH1.shouldHave(text(itemName));
     }
